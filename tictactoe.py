@@ -1,10 +1,14 @@
+
+#Tic Tac Toe "board"
 line1 = ["-", "-", "-"]
 line2 = ["-", "-", "-"]
 line3 = ["-", "-", "-"]
 game_in_progress = True
 
+#Counts the turns that have passed during the game
 turn_counter = 0
 
+#Displays the board for the player
 def display_board():
   print("===========================================================")
   print("\n\nThis is the current Tic Tac Toe board: \n\n")
@@ -12,12 +16,14 @@ def display_board():
   print(line2)
   print(line3)
 
+#Effectively restarts the X player's turn if they make an invalid selection.
 def invalid_choice_x():
   display_board()
   print("\n\n!!YOUR CHOICE WAS INVALID!! Please enter a valid choice.\n\n")
   x_row = None
   x_index = None
 
+#Effectively restarts the O player's turn if they make an invalid selection.
 def invalid_choice_o():
   display_board()
   print("\n\n!!YOUR CHOICE WAS INVALID!! Please enter a valid choice.\n\n")
@@ -25,6 +31,7 @@ def invalid_choice_o():
   o_index = None
 
 
+#Player One's turn
 def x_turn():
   print("\n\nIt is now the X player's turn!\n\n")
   global turn_counter
@@ -66,6 +73,7 @@ def x_turn():
       x_index = None
   turn_counter += 1
 
+#Player Two's turn
 def o_turn():
   print("\n\nIt is now the O player's turn!\n\n")
   global turn_counter
@@ -100,6 +108,7 @@ def o_turn():
         print("\n\n!!YOUR CHOICE WAS INVALID!! Please enter a valid choice.\n\n")
         o_row = None
         o_index = None
+    #If player does not enter 1, 2, or 3 as his/her selection for row/column
     else:
       display_board()
       print("\n\n!!YOUR CHOICE WAS INVALID!! Please enter a valid choice.\n\n")
@@ -109,12 +118,19 @@ def o_turn():
   turn_counter += 1
 
 
-
+#Main game loop, player turns will no longer occur once loop ends
 while game_in_progress:
   display_board()
   x_turn()
   # if someone wins or the whole board is filled, end the game
-  if (line1[0] == line2[0] == line3[0] == ("X" or "O")) or (line1[1] == line2[1] == line3[1] == ("X" or "O")) or (line1[2] == line2[2] == line3[2] == ("X" or "O")) or (line1[0] == line1[1] == line1[2] == ("X" or "O")) or (line2[0] == line2[1] == line2[2] == ("X" or "O")) or (line3[0] == line3[1] == line3[2] == ("X" or "O")) or (line1[0] == line2[1] == line3[2] == ("X" or "O")) or (line1[2] == line2[1] == line3[0] == ("X" or "O")):
+  if (line1[0] == line2[0] == line3[0] == ("X" or "O")) 
+  or (line1[1] == line2[1] == line3[1] == ("X" or "O")) 
+  or (line1[2] == line2[2] == line3[2] == ("X" or "O")) 
+  or (line1[0] == line1[1] == line1[2] == ("X" or "O")) 
+  or (line2[0] == line2[1] == line2[2] == ("X" or "O")) 
+  or (line3[0] == line3[1] == line3[2] == ("X" or "O")) 
+  or (line1[0] == line2[1] == line3[2] == ("X" or "O")) 
+  or (line1[2] == line2[1] == line3[0] == ("X" or "O")):
     game_in_progress = False
     print("Game over! Congratulations to the winner!")
     display_board()
@@ -127,7 +143,14 @@ while game_in_progress:
   display_board()
   o_turn()
   #check if game is completed again
-  if (line1[0] == line2[0] == line3[0] == ("X" or "O")) or (line1[1] == line2[1] == line3[1] == ("X" or "O")) or (line1[2] == line2[2] == line3[2] == ("X" or "O")) or (line1[0] == line1[1] == line1[2] == ("X" or "O")) or (line2[0] == line2[1] == line2[2] == ("X" or "O")) or (line3[0] == line3[1] == line3[2] == ("X" or "O")) or (line1[0] == line2[1] == line3[2] == ("X" or "O")) or (line1[2] == line2[1] == line3[0] == ("X" or "O")):
+  if (line1[0] == line2[0] == line3[0] == ("X" or "O")) 
+  or (line1[1] == line2[1] == line3[1] == ("X" or "O")) 
+  or (line1[2] == line2[2] == line3[2] == ("X" or "O")) 
+  or (line1[0] == line1[1] == line1[2] == ("X" or "O")) 
+  or (line2[0] == line2[1] == line2[2] == ("X" or "O")) 
+  or (line3[0] == line3[1] == line3[2] == ("X" or "O")) 
+  or (line1[0] == line2[1] == line3[2] == ("X" or "O")) 
+  or (line1[2] == line2[1] == line3[0] == ("X" or "O")):
     game_in_progress = False
     print("Game over! Congratulations to the winner!")
     display_board()
