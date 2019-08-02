@@ -1,4 +1,4 @@
-# tic-tac-toe
+# ted-tac-toe
 Simple Local Multiplayer Tic-Tac-Toe
 
 This game requires two players. The in-game prompts make playing the game simple and easy!
