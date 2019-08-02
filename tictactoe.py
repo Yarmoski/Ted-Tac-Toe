@@ -123,40 +123,28 @@ while game_in_progress:
   display_board()
   x_turn()
   # if someone wins or the whole board is filled, end the game
-  if (line1[0] == line2[0] == line3[0] == ("X" or "O")) 
-  or (line1[1] == line2[1] == line3[1] == ("X" or "O")) 
-  or (line1[2] == line2[2] == line3[2] == ("X" or "O")) 
-  or (line1[0] == line1[1] == line1[2] == ("X" or "O")) 
-  or (line2[0] == line2[1] == line2[2] == ("X" or "O")) 
-  or (line3[0] == line3[1] == line3[2] == ("X" or "O")) 
-  or (line1[0] == line2[1] == line3[2] == ("X" or "O")) 
-  or (line1[2] == line2[1] == line3[0] == ("X" or "O")):
+  if (line1[0] == line2[0] == line3[0] == ("X" or "O")) or (line1[1] == line2[1] == line3[1] == ("X" or "O")) or (line1[2] == line2[2] == line3[2] == ("X" or "O")) or (line1[0] == line1[1] == line1[2] == ("X" or "O")) or (line2[0] == line2[1] == line2[2] == ("X" or "O")) or (line3[0] == line3[1] == line3[2] == ("X" or "O")) or (line1[0] == line2[1] == line3[2] == ("X" or "O")) or (line1[2] == line2[1] == line3[0] == ("X" or "O")):
     game_in_progress = False
-    print("Game over! Congratulations to the winner!")
     display_board()
+    print("Game over! Congratulations to the winner!")
+    input("Press enter to quit")
     break
   if turn_counter >= 9:
-    game_in_progress = False
     display_board()
     print("Game over! It was a tie!")
+    input("Press enter to quit")
     break
   display_board()
   o_turn()
   #check if game is completed again
-  if (line1[0] == line2[0] == line3[0] == ("X" or "O")) 
-  or (line1[1] == line2[1] == line3[1] == ("X" or "O")) 
-  or (line1[2] == line2[2] == line3[2] == ("X" or "O")) 
-  or (line1[0] == line1[1] == line1[2] == ("X" or "O")) 
-  or (line2[0] == line2[1] == line2[2] == ("X" or "O")) 
-  or (line3[0] == line3[1] == line3[2] == ("X" or "O")) 
-  or (line1[0] == line2[1] == line3[2] == ("X" or "O")) 
-  or (line1[2] == line2[1] == line3[0] == ("X" or "O")):
+  if (line1[0] == line2[0] == line3[0] == ("X" or "O")) or (line1[1] == line2[1] == line3[1] == ("X" or "O")) or (line1[2] == line2[2] == line3[2] == ("X" or "O")) or (line1[0] == line1[1] == line1[2] == ("X" or "O")) or (line2[0] == line2[1] == line2[2] == ("X" or "O")) or (line3[0] == line3[1] == line3[2] == ("X" or "O")) or (line1[0] == line2[1] == line3[2] == ("X" or "O")) or (line1[2] == line2[1] == line3[0] == ("X" or "O")):
     game_in_progress = False
-    print("Game over! Congratulations to the winner!")
     display_board()
+    print("Game over! Congratulations to the winner!")  
+    input("Press enter to quit")
     break
   if turn_counter >= 9:
-    game_in_progress = False
     display_board()
     print("Game over! It was a tie!")
+    input("Press enter to quit")
     break
